@@ -28,14 +28,15 @@ ament_auto_find_build_dependencies()
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/isaac_ros_common-extras.cmake)
 
 # Dependencies
-find_package(vpi REQUIRED)
+#find_package(vpi REQUIRED)
 
 # vpi utilities
 ament_auto_add_library(${PROJECT_NAME} SHARED
-  src/vpi_utilities.cpp
+  #src/vpi_utilities.cpp
   src/qos.cpp
 )
-target_link_libraries(${PROJECT_NAME} vpi)
+#target_link_libraries(${PROJECT_NAME} vpi)
+target_link_libraries(${PROJECT_NAME})
 
 # Register cmake in install.
 ament_index_register_resource(isaac_ros_common_cmake_path CONTENT
